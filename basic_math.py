@@ -27,7 +27,7 @@ def get_greatest(number_list):
 
 
     greatest_number = -987987987
-    for i in range(number_list):
+    for i in number_list:
         if greatest_number < i:
             greatest_number=i
     return greatest_number
@@ -51,7 +51,7 @@ def get_smallest(number_list):
             11
     """
     smallest_number = 987987987
-    for i in range(number_list):
+    for i in number_list:
         if smallest_number > i:
             smallest_number=i
     
@@ -76,7 +76,7 @@ def get_mean(number_list):
             47
     """
     sum = 0
-    for i in range(number_list):
+    for i in number_list:
         sum += i
 
     mean = sum/len(number_list)
@@ -109,10 +109,10 @@ def get_median(number_list):
         is_even = True
 
     number_list = sorted(number_list)
-
+    mid =(int)(len(number_list)/2)
     if is_even:
-        median = (number_list[len(number_list) / 2] + number_list[len(number_list) / 2 + 1]) / 2
+        median = (number_list[mid-1] + number_list[mid]) / 2
     else:
-        median = number_list[len(number_list)/2]    
+        median = number_list[mid]    
     
     return median
